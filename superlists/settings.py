@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'tdd_project',
         'USER': 'anasmunir',
         'PASSWORD': 'tdd_project',
-        'HOST': 'localhost',
+        'HOST': 'http://104.236.211.209/',
         'PORT': '',
     }
 }
