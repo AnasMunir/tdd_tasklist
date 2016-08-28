@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tdd_project',
-        'USER': 'anasmunir',
-        'PASSWORD': 'tdd_project',
-        'HOST': '104.236.211.209',
+        'USER': 'anas_tdd',
+        'PASSWORD': 'tdd_pswd',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
