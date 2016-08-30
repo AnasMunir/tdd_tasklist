@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@4@qnt$^-mo74xdil#zw4!7p41pao+73ee!*2wggq2#li7o*pn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['mydjsuperlist-staging.tk']
 
 
 # Application definition
