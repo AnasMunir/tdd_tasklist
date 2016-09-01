@@ -33,7 +33,7 @@ SECRET_KEY = '@4@qnt$^-mo74xdil#zw4!7p41pao+73ee!*2wggq2#li7o*pn'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['mydjsuperlist-staging.tk']
 
