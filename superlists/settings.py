@@ -21,15 +21,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 
-# def get_env_variable(var_name):
-#     try:
-#         return os.environ[var_name]
-#     except KeyError:
-#         error_msg = "Set the %d environment variable" % var_name
-#         raise ImproperlyConfigured(error_msg)
+def get_env_variable(var_name):
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = "Set the %d environment variable" % var_name
+        raise ImproperlyConfigured(error_msg)
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@4@qnt$^-mo74xdil#zw4!7p41pao+73ee!*2wggq2#li7o*pn'
+SECRET_KEY = get_env_variable('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tdd_project',
-        'USER': 'anas_tdd',
-        'PASSWORD': 'tdd_pswd',
+        'NAME': get_env_variable('DATABASE_NAME'),
+        'USER': get_env_variable('DATABASE_USER'),
+        'PASSWORD': get_env_variable('DATABASE_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
