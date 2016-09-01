@@ -20,8 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@4@qnt$^-mo74xdil#zw4!7p41pao+73ee!*2wggq2#li7o*pn'
 
 def get_env_variable(var_name):
     try:
@@ -29,6 +27,10 @@ def get_env_variable(var_name):
     except KeyError:
         error_msg = "Set the %d environment variable" % var_name
         raise ImproperlyConfigured(error_msg)
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = get_env_variable('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
