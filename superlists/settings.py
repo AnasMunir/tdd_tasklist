@@ -37,7 +37,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['mydjsuperlist-staging.tk']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
